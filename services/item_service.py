@@ -12,7 +12,7 @@ class ItemService:
     async def get_item_by_id(self, item_id):
         items = await read_json()
         for item in items: 
-            if items["id"] == item_id:
+            if item["id"] == item_id:
                 return item
         raise ItemNotFoundException()
     
@@ -22,7 +22,9 @@ class ItemService:
             if x["id"] == item.id:
                 raise ItemAlreadyExistsException()
         item.created_at = datetime.now()
-        items.append(item.dict())
+        item_dict = item.dict()
+        item_dict["created_at"] = item.created_at.isoformat()
+        items.append(item_dict)
         await write_json(items)
         return item
     

@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 from datetime import datetime
 
 class Item(BaseModel):
@@ -6,4 +7,4 @@ class Item(BaseModel):
     name: str
     description: str
     price: float
-    created_at: datetime
+    created_at: Optional[datetime] = None
