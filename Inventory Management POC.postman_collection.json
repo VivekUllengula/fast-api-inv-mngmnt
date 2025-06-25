@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "7da0ca39-f662-4f01-a1d9-4b6ec13f5be1",
+		"name": "Inventory Management POC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45350719",
+		"_collection_link": "https://vivek-4617800.postman.co/workspace/Vivek's-Workspace~d53ced29-b8e6-4fad-89f0-94c59d314ca4/collection/45350719-7da0ca39-f662-4f01-a1d9-4b6ec13f5be1?action=share&source=collection_link&creator=45350719"
+	},
+	"item": [
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/items/itm001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items",
+						"itm001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"itm006\",\r\n  \"name\": \"Nothing Phone 3\",\r\n  \"description\": \"Brand new flagship phone from Nothing\",\r\n  \"price\": 1899.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/items/itm006",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items",
+						"itm006"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"itm006\",\r\n  \"name\": \"Nothing Phone 3\",\r\n  \"description\": \"Brand new flagship phone from Nothing\",\r\n  \"price\": 1899.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
